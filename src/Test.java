@@ -23,21 +23,24 @@ public class Test {
         fruits.add("Grapes");
         fruits.add("Melon");
         fruits.add("Grapefruit");
-        System.out.println("Before change - " + fruits);
-        if (fruits.contains("Orange")) {
-            fruits = fruits.stream().map(x -> x.equals("Orange") ? "Grapefruit" : x).collect(Collectors.toList());
-        } else {
-            System.out.println("There is no Orange in list");
-        }
-        fruits.add("Orange");
-        System.out.println("Before change - " + fruits);
-        if (fruits.contains("Orange")) {
-            fruits = fruits.stream().map(x -> x.equals("Orange") ? "Grapefruit" : x).collect(Collectors.toList());
-        } else {
-            System.out.println("There is no Orange in list");
-        }
-        System.out.println(fruits);
 
+        System.out.println("Before change - " + fruits);
+        if (fruits.contains("Orange")) {
+            fruits = fruits.stream().map(x -> x.equals("Orange") ? "Grapefruit" : x).collect(Collectors.toList());
+        } else {
+            System.out.println("There is no Orange in list");
+        }
+
+        fruits.add("Orange");
+
+        System.out.println("Before change - " + fruits);
+        if (fruits.contains("Orange")) {
+            fruits = fruits.stream().map(x -> x.equals("Orange") ? "Grapefruit" : x).collect(Collectors.toList());
+        } else {
+            System.out.println("There is no Orange in list");
+        }
+
+        System.out.println(fruits);
         System.out.println("Task 3");
         List<Integer> list1 = new ArrayList<>(List.of(new Integer[]{2, 3, 12, 32, 1, -5}));
         List<Integer> list2 = new ArrayList<>(List.of(new Integer[]{0, 1, 4, 6, 9, 22}));
